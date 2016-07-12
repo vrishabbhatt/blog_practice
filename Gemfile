@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #to use the slim template instead
 gem 'slim'
 gem 'slim-rails'
+#to use devise gem
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

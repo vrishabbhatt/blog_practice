@@ -10,6 +10,25 @@
 <% flash.each do |name , msg| %>
 	<%= content_tag(:div , msg , class: "alert alert-#{name}") %>
 <% end %>
+<div class="navbar navbar-default">	
+<div class="navbar-inner">
+<div id="logo" class="navbar-brand"><%= link_to "BlogPractice", root_path %></div>
+<% if user_signed_in? %>
+<nav class="collapse navbar-collapse navbar-ex1-collapse">
+	<ul class="nav navbar-nav navbar-right">
+		<li><%= link_to "create a link",new_link_path %></li>
+		<li><%= link_to "edit profile", edit_user_registration_path %></li>
+		<li><%= link_to "sign out", destroy_user_session_path , method: :delete %></li>
+	</ul>
+<% else %>
+	<ul class="nav navbar-nav navbar-right">
+		<li><%= link_to "sign up", new_user_registration_path %></li>
+		<li><%= link_to "sign in", new_user_session_path %></li>
+	</ul>
+</nav>
+<% end %>
+</div>
+</div>
 <%= yield %>
 
 </body>

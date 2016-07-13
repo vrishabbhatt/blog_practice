@@ -27,6 +27,8 @@ gem 'slim'
 gem 'slim-rails'
 #to use devise gem
 gem 'devise'
+#for bootstrap
+gem 'bootstrap-sass'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
